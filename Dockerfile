@@ -3,15 +3,17 @@ FROM python:3.12.1
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-# COPY requirements.txt /usr/src/app/
+COPY . /usr/src/app/
 
-COPY setup.py /usr/src/app/
+# COPY setup.py /usr/src/app/
+
+RUN bash -c 'echo -e ...'
 
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 RUN python setup.py install
 
-COPY . /usr/src/app
+# COPY . /usr/src/app
 
 EXPOSE 8080
 

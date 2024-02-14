@@ -3,7 +3,7 @@ FROM python:3.12.1
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-COPY . /usr/src/app/
+COPY /test /usr/src/app/
 
 # COPY setup.py /usr/src/app/
 

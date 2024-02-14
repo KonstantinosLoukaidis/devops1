@@ -7,7 +7,7 @@ COPY . /usr/src/app/
 
 # COPY setup.py /usr/src/app/
 
-RUN bash -c 'echo -e ...'
+RUN bash -c 'ls'
 
 RUN pip3 install --no-cache-dir -r requirements.txt
 
